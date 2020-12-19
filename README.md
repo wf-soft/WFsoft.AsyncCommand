@@ -5,18 +5,18 @@
 * 也包含RelayCommand 和 RelayCommand<T> 的常规命令和 NotifyTaskCompletion<TResult>
 * AsyncCommand 包含12个重载
 ```
-public static AsyncCommand<object> Create(Func<Task> command)
-public static AsyncCommand<TResult> Create<TResult>(Func<Task<TResult>> command)
-public static AsyncCommand<object> Create(Func<CancellationToken, Task> command, bool isCancelUpTask = false)
-public static AsyncCommand<TResult> Create<TResult>(Func<CancellationToken, Task<TResult>> command, bool isCancelUpTask = false)
-public static AsyncCommand<object> Create(Func<CancellationToken, ManualResetEvent, Task> command, bool isCancelUpTask = false)
-public static AsyncCommand<TResult> Create<TResult>(Func<CancellationToken, ManualResetEvent, Task<TResult>> command, bool isCancelUpTask = false)
-public static AsyncCommand<T, object> Create<T>(Func<T, Task> command)
-public static AsyncCommand<T, TResult> Create<T, TResult>(Func<T, Task<TResult>> command)
-public static AsyncCommand<T, object> Create<T>(Func<T, CancellationToken, Task> command, bool isCancelUpTask = false)
-public static AsyncCommand<T, TResult> Create<T, TResult>(Func<T, CancellationToken, Task<TResult>> command, bool isCancelUpTask = false)
-public static AsyncCommand<T, object> Create<T>(Func<T, CancellationToken, ManualResetEvent, Task> command, bool isCancelUpTask = false)
-public static AsyncCommand<T, TResult> Create<T, TResult>(Func<T, CancellationToken, ManualResetEvent, Task<TResult>> command, bool isCancelUpTask = false)
+AsyncCommand<object> Create(Func<Task> command)
+AsyncCommand<TResult> Create<TResult>(Func<Task<TResult>> command)
+AsyncCommand<object> Create(Func<CancellationToken, Task> command, bool isCancelUpTask = false)
+AsyncCommand<TResult> Create<TResult>(Func<CancellationToken, Task<TResult>> command, bool isCancelUpTask = false)
+AsyncCommand<object> Create(Func<CancellationToken, ManualResetEvent, Task> command, bool isCancelUpTask = false)
+AsyncCommand<TResult> Create<TResult>(Func<CancellationToken, ManualResetEvent, Task<TResult>> command, bool isCancelUpTask = false)
+AsyncCommand<T, object> Create<T>(Func<T, Task> command)
+AsyncCommand<T, TResult> Create<T, TResult>(Func<T, Task<TResult>> command)
+AsyncCommand<T, object> Create<T>(Func<T, CancellationToken, Task> command, bool isCancelUpTask = false)
+AsyncCommand<T, TResult> Create<T, TResult>(Func<T, CancellationToken, Task<TResult>> command, bool isCancelUpTask = false)
+AsyncCommand<T, object> Create<T>(Func<T, CancellationToken, ManualResetEvent, Task> command, bool isCancelUpTask = false)
+AsyncCommand<T, TResult> Create<T, TResult>(Func<T, CancellationToken, ManualResetEvent, Task<TResult>> command, bool isCancelUpTask = false)
 ```
 
 > AsyncCommand使用方法
