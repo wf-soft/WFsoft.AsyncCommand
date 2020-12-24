@@ -117,12 +117,12 @@ jobs:
     - name: Publish NuGet 2
     # You may pin to the exact commit or the version.
     # uses: Rebel028/publish-nuget@ef35dd81c78cadc0c08796baf7d7c388facadd69
-    uses: Rebel028/publish-nuget@v2.6.0
-    with:
-      # Filepath of the project to be packaged, relative to root of repository
-      PROJECT_FILE_PATH: WFsoft.AsyncCommand/WFsoft.AsyncCommand.csproj
-      # NuGet package id, used for version detection & defaults to project name
+      uses: Rebel028/publish-nuget@v2.6.0
+      with:
+        # Filepath of the project to be packaged, relative to root of repository
+        PROJECT_FILE_PATH: WFsoft.AsyncCommand/WFsoft.AsyncCommand.csproj
+        # NuGet package id, used for version detection & defaults to project name
       
-      NUGET_KEY: ${{secrets.NUGETKEY}}
-      # NuGet server uri hosting the packages, defaults to https://api.nuget.org
+        NUGET_KEY: ${{secrets.NUGETKEY}}
+        # NuGet server uri hosting the packages, defaults to https://api.nuget.org
       
